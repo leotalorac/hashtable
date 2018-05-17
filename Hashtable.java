@@ -35,6 +35,7 @@ public class Hashtable {
     }
     public int find(String a){
         int c = hashcode(a);
+        //System.out.println(c);
         if(data.get(c).contains(a)){
             System.out.println(c + " " +data.get(c).toString());
             return c;
