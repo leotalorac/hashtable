@@ -1,5 +1,5 @@
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -9,9 +9,11 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] arcs) throws FileNotFoundException{
-        Scanner in = new Scanner(new FileReader("InsumoTallerHash.txt"));
-        Scanner sc = new Scanner(System.in,"ISO-8859-1");
-        HashSet<String> data = new HashSet();
+        File words = new File("InsumoTallerHash.txt");
+        //FileReader w = new FileReader("InsumoTallerHash.txt");
+        Scanner in = new Scanner(words,"utf-8");
+        Scanner sc = new Scanner(System.in,"utf-8");
+        HashSet<String> data = new HashSet<>();
         System.out.print("Putting data...");
         while(in.hasNext()){
             System.out.print("...");
